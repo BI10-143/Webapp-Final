@@ -9,9 +9,26 @@
         <title>Main Dashboard</title>
     </head>
     <!-- font doesnt work for some reason -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); 
-    </style>
+        <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+          .mobileHide { display: inline; }
+          /* Smartphone Portrait and Landscape */
+          @media only screen
+            and (min-device-width : 100px)
+            and (max-device-width : 990px){
+            .mobileHide { display: none;}
+          }
+          
+          .mobileShow {display: none;}
+          /* Smartphone Portrait and Landscape */
+          @media only screen
+            and (min-device-width : 0px)
+            and (max-device-width : 989px){ 
+              .mobileShow {display: inline;}
+          }
+    </style> 
+    
     <body>
     <!-- Side bar (Quý Minh reposite)-->
     <div class="container-fluid">
@@ -56,7 +73,7 @@
           <div class="col py-3">
             <!-- Header -->
             <div class="container mt-3">
-                <div class="d-grid mt-4 mb-5">
+                <div class="d-grid mt-4 mb-5" style="color: white;">
                     <h1>DASHBOARD</h1>
                 </div>
             </div>
@@ -64,77 +81,163 @@
             <p class="lead">
                 <!-- Mainboard -->
                 <div class="container">
-                    <div id="box" class="d-grid p-5 ">
+                    <div id="box" class="d-grid p-1 p-lg-5">
                         <!-- The Search and the stuff-->
                         <div class="container">
                             <div id="search-bar" class="d-grid">
-                                <div class="row p-2 mb-3 justify-content-between">
-                                    <div class="col input-group">
+                                <div class="row p-2 mb-3 justify-content-between  mobileHide">
+                                    <div class="col-lg input-group">
                                         <input type="search" class="form-control"  style="border-radius: 50px;" placeholder="Search" aria-label="Search">
                                         <button type="button" class="btn btn-primary btn-outline-light"  style="border-radius: 50px;">search</button>
                                     </div>
-                                    <div class="offset-4 ps-5 col butons">
+                                    <div class="offset-4 ps-lg-5 col-lg butons">
                                         <button type="button" class="btn btn-primary rounded-circle btn-icon"><i class="fas fa-pen"></i></button>
                                         <button type="button" class="btn btn-primary rounded-circle btn-icon"><i class="fas fa-plus"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row p-2 ms-4 mt-mb-3" style="color: white;">
-                                <div class="col-1">ID</div>
-                                <div class="col-5">Name</div>
-                                <div class="col-4 ps-4">Department</div>
-                                <div class="col-2">Avatar</div>
+                                <div class="col-1 mobileHide">ID</div>
+                                <div class="col-5 mobileHide">Name</div>
+                                <div class="col-4 ps-4 mobileHide">Department</div>
+                                <div class="col-2 mobileHide">Avatar</div>
                             </div>
                         </div>
                         
                         <!-- the content-->
-                        <div class="overflow-auto container" style="max-height: 400px;">
+                        <div class="overflow-auto container mobileHide" style="max-height: 400px;">
                             <div id="list-names" class="d-grid gap-3 p-3">
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
-                                <div class="row p-4 border">
-                                    <div class="col-1">01</div>
-                                    <div class="col-5">Andy Murphy</div>
-                                    <div class="col-4 ps-5">Sugery</div>
-                                    <div class="col-1">Ava</div>
+                              </a>
+                              <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none; color: black;">
+                                <div class="row border ps-3">
+                                    <div class="col-1 p-4">01</div>
+                                    <div class="col-5 p-4">Shaun Murphy</div>
+                                    <div class="col-4 p-4 ps-5">Sugery</div>
+                                    <div class="col-1 ps-pt-4 ms-4 mt-3">
+                                      <img src="pic.png" class="rounded-circle" style="width: 70%; height:auto;">
+                                    </div>
                                 </div>
+                              </a>
+
 
                             </div>
                         </div>
+                        <div class="overflow-auto container" style="max-height: 400px;">
+                          <div id="list-names" class="d-grid gap-3">
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                            <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Members\First person.html" style="text-decoration: none;text-align: center; color: black;">
+                              <div class="row border">
+                                <div class="col-12 pt-2">
+                                  <img src="pic.png" class="rounded" style="width: 30%; height:auto;">
+                                </div>
+                                <div class="col-12 col-lg-5 p-2 p-lg-4">Shaun Murphy</div>
+                                <div class="col-12 col-lg-4 pb-3 p-lg-4 ps-lg-5">Sugery</div>
+                              </div>
+                            </a>
+                          </div>
                     </div>
                 </div>
             </p>           

@@ -9,21 +9,23 @@
         <title>Main Dashboard</title>
     </head>
     <style type="text/css">
-      .mobileHide { display: inline; }
-      /* Smartphone Portrait and Landscape */
-      @media only screen
-        and (min-device-width : 100px)
-        and (max-device-width : 990px){
-         .mobileHide { display: none;}
-      }
-      
-      .mobileShow {display: none;}
-      /* Smartphone Portrait and Landscape */
-      @media only screen
-        and (min-device-width : 0px)
-        and (max-device-width : 989px){ 
-          .mobileShow {display: inline;}
-}
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        .mobileHide { display: inline; }
+        /* Smartphone Portrait and Landscape */
+        @media only screen
+          and (min-device-width : 100px)
+          and (max-device-width : 990px){
+          .mobileHide { display: none;}
+        }
+        
+        .mobileShow {display: none;}
+        /* Smartphone Portrait and Landscape */
+        @media only screen
+          and (min-device-width : 0px)
+          and (max-device-width : 989px){ 
+            .mobileShow {display: inline;}
+        }
     </style>
     <body>
     <!-- Side bar -->
@@ -122,7 +124,7 @@
                                         Suffer axiety, please be careful and do NOT make him axious
                                       </p>
                                     </div>
-                                    <div id="smcontent" class="col-12 p-2 mobileShow" style="text-align: center;">
+                                    <div id="smcontent" class="col-12 mobileShow" style="text-align: center;">
                                       Name: 
                                       Shaun Murphy<br><br/>
                                       Age: 
