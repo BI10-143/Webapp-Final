@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="MStyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Members</title>
+    </head>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        .mobileHide { display: inline; }
+        /* Smartphone Portrait and Landscape */
+        @media only screen
+          and (min-device-width : 100px)
+          and (max-device-width : 990px){
+          .mobileHide { display: none;}
+        }
+        
+        .mobileShow {display: none;}
+        /* Smartphone Portrait and Landscape */
+        @media only screen
+          and (min-device-width : 0px)
+          and (max-device-width : 989px){ 
+            .mobileShow {display: inline;}
+        }
+    </style>
+    <body>
+    <!-- Side bar -->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+          <div class="sidebar col-auto px-sm-2 px-0">
+            <div class="div-nav d-flex flex-column text-white min-vh-100">
+              <div class="logo-content d-flex justify-content-evenly align-items-center  my-4">
+                <i class="logo bx bx-table bx-sm"></i>
+                <a href="/" class="hos-name text-white text-decoration-none ms-1 fw-bold">
+                  Clinic Hospital
+                </a>
+                <i class="fas fa-bars d-flex justify-content-center align-items-center" id="btn" style="width: 20px;height: 20px;"></i>
+              </div>
+              <ul class="nav nav-pills flex-column" id="menu">
+                <li>
+                  <a href="#" class="nav-link d-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
+                    <i class="icon-item fas fa-home fa-2x"></i> 
+                    <span class="link-name ms-3 fw-bold">Home</span>
+                  </a>
+                 
+                </li>
+                <li>
+                  <a href="C:\Users\Dell\Desktop\Web Doctor App\Webapp-Final\Main Dashboard\Main Dashboard.html" class="nav-link d-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard">
+                    <i class="icon-item fas fa-database fa-2x"></i> 
+                    <span class="link-name ms-3 fw-bold">Dashboard</span>
+                  </a> 
+                </li>
+    
+                <li>
+                  <a href="#" class="nav-link d-flex" data-bs-toggle="tooltip" data-bs-placement="right" title="Timetable">
+                    <i class="icon-item fas fa-calendar-alt fa-2x"></i> 
+                    <span class="link-name ms-3 fw-bold">Timetable</span> 
+                  </a>
+                </li>
+              </ul>
+              <div class="log-out-div d-flex justify-content-center p-3 mt-auto mb-3">
+                <i class="fas fa-sign-out-alt fa-2x" id="log_out"></i>
+              </div>
+            </div>
+    
+          </div>
+          <div class="col py-3">
+            <!-- Header -->
+            <div class="container mt-3">
+                <div class="d-grid mt-4 mb-3" style="color: white;">
+                    <h1>DASHBOARD</h1>
+                </div>
+            </div>
+    
+            <p class="lead">
+                <!-- Mainboard -->
+                <div class="container">
+                    <div id="box" class="d-grid p-md-5">
+                        <div id="innerbox" class="row" >
+                            <div id="picbox" class="col-12 col-lg-6 p-lg-1 mobileHide" style="background-color: rgb(92, 92, 92);">
+                                <img src="https://m.media-amazon.com/images/I/41L5XqCNhGL._AC_.jpg" class="responsive" >
+                            </div>
+                            <div id="infobox" class="col-12 col-lg-6 ps-lg-5 pt-lg-5" style="background-color: rgb(255, 255, 255);">
+                                <h2 class="col-12 mt-3" style="text-align: center;">Information</h2>
+                                <div class="overflow-auto container pt-5" style="max-height: 500px; max-width: auto;">
+                                  <div class="row">
+                                    <div id="content" class="col-12 col-lg-4 mobileHide">
+                                      <div>Name</div>
+                                      <div style="margin-top: 10px;">Age</div>
+                                      <div style="margin-top: 10px;">Department</div>
+                                      <div style="margin-top: 10px;">Phone Number</div>
+                                      <div style="margin-top: 10px;">Email</div>
+                                      <div style="margin-top: 10px;">Note</div>
+                                    </div>
+                                    <div id="dots" class="col-12 col-lg-1 mobileHide">
+                                      <div>:</div>
+                                      <div style="margin-top: 10px;">:</div>
+                                      <div style="margin-top: 10px;">:</div>
+                                      <div style="margin-top: 10px;">:</div>
+                                      <div style="margin-top: 10px;">:</div>
+                                      <div style="margin-top: 10px;">:</div>
+                                    </div>
+                                    <div id="contentfill" class="col-12 col-lg-4 mobileHide">
+                                      <div>Shaun Murphy</div>
+                                      <div style="margin-top: 10px;">29</div>
+                                      <div style="margin-top: 10px;">Sugery</div>
+                                      <div style="margin-top: 10px;">xxxxxxxxxx</div>
+                                      <div style="margin-top: 10px;">shaunmurphy@gmail.com</div>
+                                      <div style="margin-top: 10px;">Suffer axiety, please be careful and do NOT make him axious</div>
+                                    </div>
+                                    <div id="smcontent" class="col overflow-auto container mobileShow" style="text-align: center; max-height: 450px; max-width: 210px;">
+                                      <img src="https://m.media-amazon.com/images/I/41L5XqCNhGL._AC_.jpg" style="height: 50%; width: auto;"><br><br/>
+                                      <div>Name: Shaun Murphy</div>
+                                      <div>Age: 29</div>
+                                      <div>Department: Sugery</div>
+                                      <div>Phone number: xxxxxxx</div>
+                                      <div>Email: shaunmurphy@gmail.com</div>
+                                      <div>Note: Suffer axiety, please be careful and do NOT make him axious</div>
+                                      
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </p>           
+          </div>
+        </div>
+      </div>
+      
+      <svg style="position: absolute; bottom: 0; z-index: -100;" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L48,192C96,160,192,96,288,90.7C384,85,480,139,576,144C672,149,768,107,864,128C960,149,1056,235,1152,229.3C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>     
+      <script src="script.js"></script>
+    
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    </body>
+</html>
